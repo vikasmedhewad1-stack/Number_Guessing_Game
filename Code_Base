@@ -1,0 +1,27 @@
+import random
+
+number_to_guess = random.randint(1, 100)
+
+while True:
+
+   try:
+     user_input = int(input("Guess the number between 1 to 100 : "))
+      
+   except ValueError:
+      print("Please enter a valid number!")
+      continue
+
+   if user_input < 1 or user_input > 100:
+        print("Please enter a number between 1 and 100!")
+        continue
+   
+   if number_to_guess > user_input:
+      print("Too Low")
+
+   elif number_to_guess < user_input:
+      print("Too High")
+
+   else:
+      print("Congratulation you guessed the right number.")
+
+      break
